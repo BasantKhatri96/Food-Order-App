@@ -1,0 +1,100 @@
+@import "src/scss/typography";
+@import "src/scss/styles";
+@import "src/scss/variables";
+@import "src/scss/components";
+
+.managemenu {
+  display: grid;
+  grid-column: full-start / full-end;
+  justify-content: center;
+  margin-right: auto;
+  padding: 0 4rem;
+
+  &__addnew {
+    font-size: 1.8rem;
+    color: $color-black;
+    grid-row: 2/3;
+    grid-column: 5/12;
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+    cursor: pointer;
+
+    &-link {
+      text-decoration: none;
+    }
+
+    &-icon {
+      margin-left: 2rem;
+    }
+  }
+
+  &__date {
+    color: $color-black;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    justify-content: space-between;
+    grid-row: 2/3;
+    grid-column: 4/12;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1/-1;
+    }
+
+    &__from-icon {
+      margin-left: 4rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
+}
+
+.table {
+  grid-row: 2/3;
+
+  // table for smaller screens//
+  @media only screen and (max-width: $bp-medium) {
+    td:nth-child(1)::before {
+      content: "#id:";
+    }
+    td:nth-child(2)::before {
+      content: "Image:";
+    }
+    td:nth-child(3)::before {
+      content: "Name:";
+    }
+    td:nth-child(4)::before {
+      content: "Description:";
+    }
+    td:nth-child(5)::before {
+      content: "Rate:";
+    }
+    td:nth-child(6)::before {
+      content: "Type:";
+    }
+  }
+}
+
+.table tbody tr td {
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem;
+  }
+}
+.tbl-btn {
+  @media only screen and (max-width: $bp-medium) {
+    width: 4rem;
+  }
+}
+
+.img {
+  width: 80%;
+  height: 6rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 10rem;
+  }
+}

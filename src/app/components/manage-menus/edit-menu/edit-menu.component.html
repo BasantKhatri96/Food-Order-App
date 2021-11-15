@@ -1,0 +1,50 @@
+<section class="container">
+  <div class="editmenu">
+    <form class="editmenu__form">
+      <mat-form-field class="editmenu__form-fields" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Ex. Pizza" />
+      </mat-form-field>
+
+      <mat-form-field class="editmenu__form-fields" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="editmenu__form-fields" appearance="fill">
+        <mat-label>Rate</mat-label>
+        <input type="number" matInput placeholder="Rs 70" />
+      </mat-form-field>
+      <mat-form-field class="editmenu__form-fields" appearance="fill">
+        <mat-label>Type</mat-label>
+        <mat-select>
+          <mat-option value="one">Break Fast</mat-option>
+          <mat-option value="two">Lunch</mat-option>
+          <mat-option value="three">Dinner</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="editmenu__form-fields" appearance="fill">
+        <mat-label>Apply Cupon</mat-label>
+        <mat-select>
+          <mat-option value="one">NEW50</mat-option>
+          <mat-option value="two">SPECIAL20</mat-option>
+          <mat-option value="three">OFF100 </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="editmenu__form-fileupload">
+        <label for="myfile">Upload Image</label><br />
+        <input type="file" id="myfile" name="myfile" />
+      </div>
+
+      <div class="editmenu__form-fields-btn">
+        <a
+          class="editmenu__form-fields-btn-link"
+          routerLink="/managemenus"
+          href="#"
+          >update</a
+        >
+      </div>
+    </form>
+  </div>
+</section>

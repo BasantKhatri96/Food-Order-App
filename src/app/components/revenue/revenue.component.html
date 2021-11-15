@@ -1,0 +1,76 @@
+<section class="revenue container">
+  <h2 class="heading-2">revenue</h2>
+
+  <div class="revenue__date">
+    <mat-form-field appearance="fill">
+      <mat-label>Date From</mat-label>
+      <input matInput [matDatepicker]="picker1" />
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Date To</mat-label>
+        <input matInput [matDatepicker]="picker" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <td>#id</td>
+        <td>cost</td>
+        <td>Net</td>
+        <td>gross</td>
+        <td>gross</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="#id">1</td>
+        <td data-label="items">750</td>
+        <td data-label="QTY">580</td>
+        <td data-label="rate">1000</td>
+        <td data-label="rate">2000</td>
+      </tr>
+      <tr>
+        <td data-label="#id">1</td>
+        <td data-label="items">750</td>
+        <td data-label="QTY">580</td>
+        <td data-label="rate">1000</td>
+        <td data-label="rate">2000</td>
+      </tr>
+      <tr>
+        <td data-label="#id">1</td>
+        <td data-label="items">750</td>
+        <td data-label="QTY">580</td>
+        <td data-label="rate">1000</td>
+        <td data-label="rate">2000</td>
+      </tr>
+      <tr>
+        <td data-label="#id">1</td>
+        <td data-label="items">750</td>
+        <td data-label="QTY">580</td>
+        <td data-label="rate">1000</td>
+        <td data-label="rate">2000</td>
+      </tr>
+      <tr>
+        <td data-label="#id">1</td>
+        <td data-label="items">750</td>
+        <td data-label="QTY">580</td>
+        <td data-label="rate">1000</td>
+        <td data-label="rate">2000</td>
+      </tr>
+      <tr>
+        <td data-label="#id">1</td>
+        <td data-label="items">750</td>
+        <td data-label="QTY">580</td>
+        <td data-label="rate">1000</td>
+        <td data-label="rate">2000</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

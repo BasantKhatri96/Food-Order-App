@@ -1,0 +1,44 @@
+@import "src/scss/styles";
+@import "src/scss/variables";
+
+.editmenu {
+  grid-column: 6/9;
+
+  &-heading {
+    text-align: center;
+    color: $color-black;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 2rem;
+  }
+
+  &__form {
+    &-fields {
+      width: 100%;
+      color: black;
+      font-size: 1.5rem;
+
+      &-btn {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        background-color: $color-primary-light-1;
+
+        &-link {
+          color: $color-white;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1rem 1rem;
+          font-size: 2rem;
+          transition: all 0.5s;
+        }
+        &-link:hover {
+          color: $color-primary-dark;
+        }
+      }
+    }
+    &-fileupload {
+      color: $color-black;
+    }
+  }
+}

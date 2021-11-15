@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: $color-white;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+// LAYOUT GRID //
+.container {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns:
+    [full-start]
+    repeat(12, [col-start] minmax(min-content, 14rem) [col-end])
+    [full-end];
+  grid-template-rows: repeat(5, max-content);
+  row-gap: 3rem;
+}

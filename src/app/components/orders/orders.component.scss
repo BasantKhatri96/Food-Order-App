@@ -1,0 +1,15 @@
+@import "src/scss/variables";
+@import "src/scss/styles";
+@import "src/scss/typography";
+@import "src/scss/components";
+
+.orders {
+  padding: 0 4rem;
+  grid-column: full-start / full-end;
+  display: grid;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
+}

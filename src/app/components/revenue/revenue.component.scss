@@ -1,0 +1,61 @@
+@import "src/scss/typography";
+@import "src/scss/styles";
+@import "src/scss/variables";
+@import "src/scss/components";
+
+.revenue {
+  padding: 0 4rem;
+  grid-column: full-start / full-end;
+  display: grid;
+
+  justify-content: center;
+  margin-right: auto;
+
+  &__date {
+    color: #000;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    justify-content: space-between;
+    grid-row: 2/3;
+    grid-column: 5/11;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
+      grid-column: 7/12;
+    }
+    &__from-icon {
+      margin-left: 4rem;
+    }
+  }
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
+}
+
+.table {
+  grid-row: 3/4;
+  grid-column: 5/11;
+
+  // table for smaller screens//
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1/-1;
+
+    td:nth-child(1)::before {
+      content: "#id:";
+    }
+    td:nth-child(2)::before {
+      content: "cost:";
+    }
+    td:nth-child(3)::before {
+      content: "net:";
+    }
+    td:nth-child(4)::before {
+      content: "gross:";
+    }
+    td:nth-child(5)::before {
+      content: "Total:";
+    }
+  }
+}
