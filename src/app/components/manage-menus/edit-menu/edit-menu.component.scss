@@ -3,19 +3,12 @@
 
 .editmenu {
   grid-column: 6/9;
-
-  &-heading {
-    text-align: center;
-    color: $color-black;
-    font-size: 3rem;
-    text-transform: uppercase;
-    padding: 2rem;
-  }
+  padding: 2rem 1rem;
 
   &__form {
     &-fields {
       width: 100%;
-      color: black;
+      color: $color-black;
       font-size: 1.5rem;
 
       &-btn {

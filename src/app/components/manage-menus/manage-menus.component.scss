@@ -4,11 +4,10 @@
 @import "src/scss/components";
 
 .managemenu {
-  display: grid;
   grid-column: full-start / full-end;
   justify-content: center;
-  margin-right: auto;
-  padding: 0 4rem;
+  padding: 2rem 0;
+  margin-right: 4rem;
 
   &__addnew {
     font-size: 1.8rem;
@@ -36,7 +35,7 @@
     align-items: center;
     padding: 0.5rem;
     justify-content: space-between;
-    grid-row: 2/3;
+    grid-row: 3/-1;
     grid-column: 4/12;
 
     @media only screen and (max-width: $bp-medium) {
@@ -50,13 +49,13 @@
 
   @media only screen and (max-width: $bp-medium) {
     padding: 2rem;
+    margin-right: 0;
   }
 }
 
 .table {
-  grid-row: 2/3;
+  grid-row: 3/-1;
 
-  // table for smaller screens//
   @media only screen and (max-width: $bp-medium) {
     td:nth-child(1)::before {
       content: "#id:";
@@ -75,6 +74,9 @@
     }
     td:nth-child(6)::before {
       content: "Type:";
+    }
+    td:nth-child(7)::before {
+      content: "Actions:";
     }
   }
 }

@@ -1,4 +1,4 @@
-<section class="menu">
+<section class="container">
   <nav class="navbar">
     <p class="navbar__logo">FOA</p>
 
@@ -7,7 +7,7 @@
         class="navbar__items__search-box"
         type="text"
         placeholder="Search your favourite Food..."
-      /><mat-icon>search</mat-icon>
+      /><mat-icon class="navbar__items__search-box-icon">search</mat-icon>
 
       <a class="navbar__admin-link">Offers </a>
       <a class="navbar__admin-link">Help</a>
@@ -15,464 +15,561 @@
     </div>
     <a href="#" class="navbar__admin-link">ADMIN</a>
   </nav>
-  <div class="menu__filter">
-    <button mat-button [matMenuTriggerFor]="menu">
-      <mat-icon>expand_more</mat-icon>
-      <mat-icon>location_on</mat-icon>
+  <section class="section-hero">
+    <div class="section-hero__texts">
+      <h1 class="section-hero__texts-heading">
+        Meet,Eat & Enjoy The True Taste....
+      </h1>
+      <p>
+        Lorem ipsum dolor, sittenh amet consectetur yuking fin adipisicing elit
+        and resg se.
+      </p>
 
-      <!-- <mat-icon class="menu__filter-icon">my_location</mat-icon> -->
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Olakha</button>
-      <button mat-menu-item>Babesa</button>
-      <button mat-menu-item>Taba</button>
-      <button mat-menu-item>Main Town</button>
-      <button mat-menu-item>Motithang</button>
-    </mat-menu>
-    Location
+      <mat-card-actions class="section-hero__btn">
+        <a routerLink="/home"
+          ><button mat-raised-button color="primary">SEE OUR MENU</button></a
+        >
+      </mat-card-actions>
+      <mat-card-actions class="section-hero__btn">
+        <a routerLink="/home"
+          ><button mat-raised-button color="warn">SPECIAL OFFER</button></a
+        >
+      </mat-card-actions>
+    </div>
+  </section>
 
-    <p class="menu__catagories">categories</p>
+  <div class="menu">
+    <div class="menu__filter">
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>expand_more</mat-icon>
+        <mat-icon>location_on</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Olakha</button>
+        <button mat-menu-item>Babesa</button>
+        <button mat-menu-item>Taba</button>
+        <button mat-menu-item>Main Town</button>
+        <button mat-menu-item>Motithang</button>
+      </mat-menu>
+      Location
 
-    <button mat-button [matMenuTriggerFor]="menu2">
-      <mat-icon>expand_more</mat-icon>
-    </button>
-    <mat-menu #menu2="matMenu">
-      <button mat-menu-item>Break Fast</button>
-      <button mat-menu-item>Lunch</button>
-      <button mat-menu-item>Dinner</button>
-    </mat-menu>
+      <a class="menu__customorder" routerLink="/customorder"
+        >Custom order<mat-icon>post_add</mat-icon></a
+      >
+      <p class="menu__catagories">Filter</p>
+
+      <button
+        class="menu__catagories-dropdown"
+        mat-button
+        [matMenuTriggerFor]="menu2"
+      >
+        <mat-icon>expand_more</mat-icon>
+      </button>
+      <mat-menu #menu2="matMenu">
+        <button mat-menu-item>Break Fast</button>
+        <button mat-menu-item>Lunch</button>
+        <button mat-menu-item>Dinner</button>
+      </mat-menu>
+    </div>
+
+    <div class="menu__lists">
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-1.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Chicken Curry</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-2.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Egg Rice</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-3.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Paneer Rice</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-4.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Fried Rice</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-5.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Pork Rice</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-6.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Momo</h4>
+
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-7.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Chicken Curry</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-8.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Chicken Curry</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-1.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Chicken Curry</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p></span
+        >
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-2.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Egg Rice</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-8.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Chicken Curry</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-4.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Fried Rice</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-5.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Pork Rice</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+        >
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-6.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Momo</h4>
+
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-7.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Chicken Curry</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+      <div class="menu__lists__items">
+        <img
+          src="assets/img/food-5.jpg"
+          alt=""
+          class="menu__lists__items-img"
+        />
+        <h4 class="menu__lists__items__heading">Pork Rice</h4>
+        <div class="menu__lists__items__desc">
+          <p>
+            Home Food, North Indian, Biryani, Thalis, Beverages, Chinese,
+            Healthy Food, Indi...
+          </p>
+        </div>
+        <div class="menu__lists__items__rating">
+          <mat-icon id="fivestar">star_rate</mat-icon>5.0+
+          <mat-icon>schedule</mat-icon>35 mins
+          <mat-icon>currency_rupee</mat-icon>70
+        </div>
+        >
+        <span class="menu__lists__items__qty">
+          <span>Quantity</span>
+
+          <mat-icon>add</mat-icon>
+        </span>
+        <span class="menu__lists__items__cuponcode">
+          <mat-icon>local_offer </mat-icon>
+          <p>20% off on all orders</p>
+        </span>
+
+        <a routerLink="/home" class="menu__lists__items__order-btn">Order</a>
+      </div>
+    </div>
   </div>
 
-  <div class="menu__lists">
-    <div class="menu__lists__items">
-      <img src="assets/img/food-1.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Chicken Curry</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-2.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Egg Rice</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-3.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Paneer Rice</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-4.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Fried Rice</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-5.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Pork Rice</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-      >
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-6.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Momo</h4>
-
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-7.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Chicken Curry</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-8.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Chicken Curry</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-1.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Chicken Curry</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders/p></p></span
-      >
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-2.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Egg Rice</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-8.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Chicken Curry</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-4.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Fried Rice</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-5.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Pork Rice</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-      >
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-6.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Momo</h4>
-
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-7.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Chicken Curry</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
-    <div class="menu__lists__items">
-      <img src="assets/img/food-5.jpg" alt="" class="menu__lists__items-img" />
-      <h4 class="menu__lists__items__heading">Pork Rice</h4>
-      <div class="menu__lists__items__desc">
-        <p>
-          Home Food, North Indian, Biryani, Thalis, Beverages, Chinese, Healthy
-          Food, Indi...
-        </p>
-      </div>
-      <div class="menu__lists__items__rating">
-        <mat-icon id="fivestar">star_rate</mat-icon>5.0+
-        <mat-icon>schedule</mat-icon>35 mins
-        <mat-icon>currency_rupee</mat-icon>70
-      </div>
-      >
-      <span class="menu__lists__items__qty">
-        <span>Quantity</span>
-
-        <mat-icon>add</mat-icon>
-      </span>
-      <span class="menu__lists__items__cuponcode">
-        <mat-icon>local_offer </mat-icon>
-        <p>20% off on all orders</p>
-      </span>
-
-      <a href="#" class="menu__lists__items__order-btn">Order</a>
-    </div>
+  <div class="footer">
+    <p>&copy; 2021 All right reserved. Developed by Basant Khatri</p>
   </div>
 </section>

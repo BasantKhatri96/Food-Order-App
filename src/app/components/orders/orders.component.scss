@@ -13,3 +13,19 @@
     padding: 2rem;
   }
 }
+.table {
+  @media only screen and (max-width: $bp-medium) {
+    td:nth-child(7)::before {
+      content: "type:";
+    }
+    td:nth-child(8)::before {
+      content: "status:";
+    }
+    td:nth-child(9)::before {
+      content: "Address:";
+    }
+    td:nth-child(10)::before {
+      content: "Action:";
+    }
+  }
+}

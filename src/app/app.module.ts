@@ -25,6 +25,8 @@ import { EditMenuComponent } from './components/manage-menus/edit-menu/edit-menu
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CustomOrderComponent } from './components/custom-order/custom-order.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ManageMenusComponent,
     EditMenuComponent,
     DashboardComponent,
+    CustomOrderComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +58,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatSortModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

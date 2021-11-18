@@ -4,12 +4,13 @@
   width: 100%;
   border-collapse: collapse;
   grid-row: 2/3;
-  grid-column: 5/-1;
+  grid-column: 5/12;
 
-  // table for smaller screens//
+  // table for medium screens//
   @media only screen and (max-width: $bp-medium) {
     font-size: 1.1rem;
     grid-column: 1/-1;
+
     thead {
       display: none;
     }
@@ -20,30 +21,22 @@
       content: "#id:";
     }
     td:nth-child(2)::before {
-      content: "items:";
+      content: "Company";
     }
     td:nth-child(3)::before {
-      content: "QTY:";
+      content: "items:";
     }
     td:nth-child(4)::before {
-      content: "rate:";
+      content: "QTY:";
     }
     td:nth-child(5)::before {
-      content: "cost:";
+      content: "rate:";
     }
+
     td:nth-child(6)::before {
       content: "date:";
     }
-    td:nth-child(7)::before {
-      content: "type:";
-    }
-    td:nth-child(8)::before {
-      content: "status:";
-    }
-    td:nth-child(9)::before {
-      content: "Action:";
-      display: flex;
-    }
+
     td {
       text-align: right !important;
     }
@@ -53,30 +46,31 @@
       font-weight: 600;
     }
   }
-}
-.table thead {
-  background-color: $color-primary-dark;
-}
-.table thead tr td {
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 0.35px;
-  color: $color-white;
-  padding: 1.2rem;
-  vertical-align: top;
-  border: 1px solid #dee2e685;
-  text-align: center;
-  text-transform: uppercase;
-}
-.table tbody tr td {
-  font-size: 1.4rem;
-  letter-spacing: 0.35px;
-  font-weight: normal;
-  color: $color-white;
-  background-color: $color-primary-light;
-  padding: 0.8rem;
-  text-align: center;
-  border: 1px solid $color-white-light;
+
+  & thead {
+    background-color: $color-primary-dark;
+  }
+  & thead tr td {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    color: $color-white;
+    padding: 1.2rem;
+    vertical-align: top;
+    border: 1px solid #dee2e685;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  & tbody tr td {
+    font-size: 1.6rem;
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    color: $color-white;
+    background-color: $color-primary-light;
+    padding: 0.8rem;
+    text-align: center;
+    border: 1px solid $color-white-light;
+  }
 }
 .tbl-btn {
   padding: 0.8rem;

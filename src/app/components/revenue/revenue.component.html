@@ -2,14 +2,14 @@
   <h2 class="heading-2">revenue</h2>
 
   <div class="revenue__date">
-    <mat-form-field appearance="fill">
+    <mat-form-field class="revenue__date-picker" appearance="fill">
       <mat-label>Date From</mat-label>
       <input matInput [matDatepicker]="picker1" />
       <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
       <mat-datepicker #picker1></mat-datepicker>
     </mat-form-field>
     <div>
-      <mat-form-field appearance="fill">
+      <mat-form-field class="revenue__date-picker" appearance="fill">
         <mat-label>Date To</mat-label>
         <input matInput [matDatepicker]="picker" />
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -22,54 +22,54 @@
     <thead>
       <tr>
         <td>#id</td>
-        <td>cost</td>
-        <td>Net</td>
-        <td>gross</td>
-        <td>gross</td>
+        <td>Company Name</td>
+        <td>Total Orders</td>
+        <td>Status</td>
+        <td>Amount</td>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td data-label="#id">1</td>
-        <td data-label="items">750</td>
+        <td data-label="items">SELISE</td>
         <td data-label="QTY">580</td>
-        <td data-label="rate">1000</td>
-        <td data-label="rate">2000</td>
+        <td data-label="rate">Paid</td>
+        <td data-label="rate">20000</td>
       </tr>
       <tr>
-        <td data-label="#id">1</td>
-        <td data-label="items">750</td>
+        <td data-label="#id">2</td>
+        <td data-label="items">Edu Tech</td>
         <td data-label="QTY">580</td>
-        <td data-label="rate">1000</td>
-        <td data-label="rate">2000</td>
+        <td data-label="rate">paid</td>
+        <td data-label="rate">26000</td>
       </tr>
       <tr>
-        <td data-label="#id">1</td>
-        <td data-label="items">750</td>
+        <td data-label="#id">3</td>
+        <td data-label="items">Resen Technology</td>
         <td data-label="QTY">580</td>
-        <td data-label="rate">1000</td>
-        <td data-label="rate">2000</td>
+        <td data-label="rate">Paid</td>
+        <td data-label="rate">23000</td>
       </tr>
       <tr>
-        <td data-label="#id">1</td>
-        <td data-label="items">750</td>
+        <td data-label="#id">4</td>
+        <td data-label="items">sShangrila travels</td>
         <td data-label="QTY">580</td>
-        <td data-label="rate">1000</td>
-        <td data-label="rate">2000</td>
+        <td data-label="rate">Paid</td>
+        <td data-label="rate">16000</td>
       </tr>
       <tr>
-        <td data-label="#id">1</td>
-        <td data-label="items">750</td>
+        <td data-label="#id">5</td>
+        <td data-label="items">L&T</td>
         <td data-label="QTY">580</td>
-        <td data-label="rate">1000</td>
-        <td data-label="rate">2000</td>
+        <td data-label="rate">Paid</td>
+        <td data-label="rate">60000</td>
       </tr>
       <tr>
-        <td data-label="#id">1</td>
-        <td data-label="items">750</td>
+        <td data-label="#id">6</td>
+        <td data-label="items">MOE</td>
         <td data-label="QTY">580</td>
-        <td data-label="rate">1000</td>
-        <td data-label="rate">2000</td>
+        <td data-label="rate">Paid</td>
+        <td data-label="rate">21000</td>
       </tr>
     </tbody>
   </table>

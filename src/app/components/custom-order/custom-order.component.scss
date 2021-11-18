@@ -1,0 +1,21 @@
+@import "src/scss/styles";
+
+.customorder {
+  padding-top: 1rem;
+  grid-column: 5/9;
+
+  &__heading {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  &__form {
+    &-field {
+      display: block;
+    }
+    &-btn {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

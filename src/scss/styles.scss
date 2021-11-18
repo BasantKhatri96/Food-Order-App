@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans" !important;
   color: $color-white;
   line-height: 1.6;
   font-weight: 300;
@@ -20,11 +20,14 @@ body {
 // LAYOUT GRID //
 .container {
   display: grid;
-  padding: 2rem;
+  padding: 0 2rem;
   grid-template-columns:
     [full-start]
     repeat(12, [col-start] minmax(min-content, 14rem) [col-end])
     [full-end];
   grid-template-rows: repeat(5, max-content);
-  row-gap: 3rem;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+  }
 }

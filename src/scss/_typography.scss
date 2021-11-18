@@ -1,6 +1,8 @@
 @import "src/scss/styles";
 @import "src/scss/variables";
+
 .heading-2 {
+  font-family: "Josefin Sans";
   font-size: 3rem;
   padding: 2rem;
   text-align: center;
@@ -9,12 +11,16 @@
   grid-column: 4/12;
 
   &-menulist {
+    font-family: inherit;
     text-transform: uppercase;
     padding: 2rem;
     text-align: center;
     font-size: 3rem;
     color: $color-black;
-    grid-column: 5/-1;
+    grid-column: 4/-1;
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 2/-1;
+    }
   }
 
   &-orders {

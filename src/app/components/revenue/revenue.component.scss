@@ -12,7 +12,7 @@
   margin-right: auto;
 
   &__date {
-    color: #000;
+    color: $color-black;
     display: flex;
     font-size: 1.5rem;
     align-items: center;
@@ -23,10 +23,13 @@
 
     @media only screen and (max-width: $bp-medium) {
       display: block;
-      grid-column: 7/12;
+      grid-column: 1/-1;
     }
-    &__from-icon {
-      margin-left: 4rem;
+
+    &-picker {
+      @media only screen and (max-width: $bp-medium) {
+        display: block;
+      }
     }
   }
   @media only screen and (max-width: $bp-medium) {
@@ -45,17 +48,14 @@
     td:nth-child(1)::before {
       content: "#id:";
     }
-    td:nth-child(2)::before {
-      content: "cost:";
-    }
     td:nth-child(3)::before {
-      content: "net:";
+      content: "Total Orders:";
     }
     td:nth-child(4)::before {
-      content: "gross:";
+      content: "Status:";
     }
     td:nth-child(5)::before {
-      content: "Total:";
+      content: "Total Amount:";
     }
   }
 }

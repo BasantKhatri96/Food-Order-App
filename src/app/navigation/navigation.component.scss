@@ -21,7 +21,6 @@
 .logout {
   margin-left: auto;
   display: flex;
-  padding-top: 1rem;
 
   @media only screen and (max-width: $bp-medium) {
     font-size: 1.4rem;
@@ -41,7 +40,7 @@
     margin-left: 3rem;
   }
   &__link:hover {
-    background-color: #e3e3e3;
-    color: $color-black;
+    background-color: $color-primary-light-1;
+    color: $color-white;
   }
 }
