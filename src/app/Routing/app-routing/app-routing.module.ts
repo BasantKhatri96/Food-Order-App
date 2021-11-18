@@ -8,16 +8,18 @@ import { HomeComponent } from 'src/app/components/home/home.component';
 import { ManageMenusComponent } from 'src/app/components/manage-menus/manage-menus.component';
 import { EditMenuComponent } from 'src/app/components/manage-menus/edit-menu/edit-menu.component';
 import { CustomOrderComponent } from 'src/app/components/custom-order/custom-order.component';
+import { DashboardComponent } from 'src/app/components/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'orders', component: OrdersComponent },
   { path: 'navigation', component: NavigationComponent },
   { path: 'revenue', component: RevenueComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'managemenus', component: ManageMenusComponent },
   { path: 'editmenu', component: EditMenuComponent },
   { path: 'addmenu', component: EditMenuComponent },
   { path: 'customorder', component: CustomOrderComponent },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({

@@ -20,7 +20,8 @@
     text-transform: uppercase;
 
     &__search-box {
-      font-size: 1.5rem;
+      font-family: "Josefin Sans";
+      font-size: 1.7rem;
       margin-left: 2rem;
       border-radius: 2rem;
       padding: 1rem;
@@ -81,7 +82,9 @@
 
 .section {
   &-hero {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 88vh;
     grid-row: 2/3;
     grid-column: 1/-1;
@@ -96,28 +99,69 @@
     background-position: center;
 
     @media only screen and (max-width: $bp-medium) {
-      height: 50vh;
+      height: 70vh;
+    }
+    @media only screen and (max-width: $bp-small) {
+      display: none;
     }
 
     &__btn {
-      margin-right: 3rem;
+      display: flex;
+      margin-top: 3rem;
 
-      @media only screen and (max-width: $bp-medium) {
+      &-SOM {
         display: block;
-        margin-bottom: 2rem;
-        display: flex;
-        justify-content: center;
+        align-self: center;
+        text-align: center;
+        font-weight: 600;
+        text-decoration: none;
+        background-color: $color-primary-light-1;
+        color: $color-white;
+        padding: 1.5rem 2rem;
+        border-radius: 5px;
+        margin: 0 2rem 2rem 0;
+        transition: all 0.5s;
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 1rem;
+          align-self: center;
+          padding: 0.5rem 0.5rem;
+        }
+      }
+      &-SOM:hover {
+        background-color: $color-primary;
+      }
+      &-SO {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        text-decoration: none;
+        background-color: transparent;
+        border: 2px solid $color-white;
+        color: $color-white;
+        padding: 1.3rem 1.8rem;
+        border-radius: 5px;
+        margin: 0 2rem 2rem 0;
+        transition: all 0.5s;
+
+        @media only screen and (max-width: $bp-small) {
+          display: block;
+          font-size: 1rem;
+          align-self: center;
+          padding: 0.5rem 0.5rem;
+        }
+      }
+      &-SO:hover {
+        background-color: $color-white-light;
       }
     }
 
     &__texts {
+      padding: 6rem;
+
       font-weight: 200;
       letter-spacing: 1.5px;
       font-family: "Josefin Sans";
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
 
       &-heading {
         font-size: 4rem;

@@ -13,28 +13,25 @@
       <a class="navbar__admin-link">Help</a>
       <a class="navbar__admin-link">Contact </a>
     </div>
-    <a href="#" class="navbar__admin-link">ADMIN</a>
+    <a routerLink="/dashboard" href="#" class="navbar__admin-link">ADMIN</a>
   </nav>
   <section class="section-hero">
     <div class="section-hero__texts">
-      <h1 class="section-hero__texts-heading">
-        Meet,Eat & Enjoy The True Taste....
-      </h1>
+      <marquee scrollamount="15" behavior="" direction="left"
+        ><h1 class="section-hero__texts-heading">
+          Meet,Eat & Enjoy The True Taste....
+        </h1></marquee
+      >
       <p>
         Lorem ipsum dolor, sittenh amet consectetur yuking fin adipisicing elit
         and resg se.
       </p>
 
-      <mat-card-actions class="section-hero__btn">
-        <a routerLink="/home"
-          ><button mat-raised-button color="primary">SEE OUR MENU</button></a
-        >
-      </mat-card-actions>
-      <mat-card-actions class="section-hero__btn">
-        <a routerLink="/home"
-          ><button mat-raised-button color="warn">SPECIAL OFFER</button></a
-        >
-      </mat-card-actions>
+      <div class="section-hero__btn">
+        <a class="section-hero__btn-SOM" routerLink="/home">OUR MENU</a>
+
+        <a class="section-hero__btn-SO" routerLink="/home">OFFERS</a>
+      </div>
     </div>
   </section>
 
